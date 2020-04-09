@@ -3,6 +3,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
     tools:context=".EditProfileActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:text="Edit Profile"
+        android:textSize="10pt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:height="75dp"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:height="75dp"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginEnd="1dp"
+        android:onClick="prosesSubmit"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPassword"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="530dp"
+        android:layout_marginEnd="1dp"
+        android:onClick="prosesEditPassword"
+        android:text="Edit Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
