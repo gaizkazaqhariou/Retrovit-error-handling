@@ -55,12 +55,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if (response.isSuccessful()) {
-//                    SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-//                    SharedPreferences.Editor editor = preference.edit();
-//                    editor.putString("token",response.body().getToken());
-//                    editor.apply();
-//                    Intent i = new Intent(getApplicationContext(),ProfileActivity.class);
-//                    startActivity(i);
                     token = response.body().getToken();
                     token_type = response.body().getToken_type();
                     Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
@@ -76,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         Toast.makeText(MainActivity.this, error.getError().getEmail().get(0), Toast.LENGTH_SHORT).show();
                     }
-                    //email.setError(error.getError().getEmail().get(0));
                 }
             }
 
